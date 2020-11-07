@@ -1,4 +1,5 @@
-const User = require('../models/User');
+/*
+onst User = require('../models/User');
 const authService = require('../services/auth.service');
 const bcryptService = require('../services/bcrypt.service');
 
@@ -89,3 +90,5 @@ const UserController = () => {
 };
 
 module.exports = UserController;
+
+*/

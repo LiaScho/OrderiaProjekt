@@ -7,12 +7,13 @@ const helmet = require('helmet');
 const http = require('http');
 const mapRoutes = require('express-routes-mapper');
 const cors = require('cors');
+const console = require('console');
 
 /**
  * server configuration
  */
 const config = require('../config/');
-const dbService = require('./services/db.service');
+// const dbService = require('./services/db.service');
 const auth = require('./policies/auth.policy');
 
 // environment: development, staging, testing, production
@@ -25,7 +26,7 @@ const app = express();
 const server = http.Server(app);
 const mappedOpenRoutes = mapRoutes(config.publicRoutes, 'api/controllers/');
 const mappedAuthRoutes = mapRoutes(config.privateRoutes, 'api/controllers/');
-const DB = dbService(environment, config.migrate).start();
+// const DB = dbService(environment, config.migrate).start();
 
 // allow cross origin requests
 // configure to only allow requests from certain origins
@@ -57,5 +58,7 @@ server.listen(config.port, () => {
     console.error(`NODE_ENV is set to ${environment}, but only production and development are valid.`);
     process.exit(1);
   }
-  return DB;
+
+  // return DB;
+  return true;
 });

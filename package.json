@@ -20,6 +20,7 @@
     "create-sqlite-db": "shx touch ./db/database.sqlite",
     "drop-sqlite-db": "shx rm ./db/database.sqlite",
     "lint": "eslint ./api/. ./config/. ./test/.",
+    "lint-fix": "eslint --fix ./api/. ./config/. ./test/.",
     "prepush": "npm test",
     "pretest": "npm run lint",
     "production": "cross-env NODE_ENV=production node ./api/api.js",
@@ -44,6 +45,7 @@
     "express-routes-mapper": "^1.0.2",
     "helmet": "^3.12.0",
     "jsonwebtoken": "^8.2.1",
+    "mysql": "^2.18.1",
     "pg-promise": "^10.7.3",
     "sequelize": "^6.3.5",
     "sqlite3": "^4.0.0"

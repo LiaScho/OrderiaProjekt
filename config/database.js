@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
-const path = require('path');
+// const path = require('path');
+const mysql = require('mysql');
+// const pgp = require('pg-promise')
 
 const connection = require('./connection');
 
@@ -51,10 +53,18 @@ switch (process.env.NODE_ENV) {
         },
         storage: path.join(process.cwd(), 'db', 'database.sqlite'),
       },
-    );*/
+    ); */
 
-    database = pgp('postgres://username:password@host:port/database')
+    // database = pgp('postgres://username:password@host:port/database')
 
+    database = mysql.createConnection({
+      host: connection.development.host,
+      user: connection.development.username,
+      password: connection.development.password,
+      database: connection.development.database,
+    });
+
+    // database.connect()
 }
 
 module.exports = database;

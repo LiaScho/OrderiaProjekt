@@ -1,9 +1,9 @@
 const development = {
-  database: 'postrge',
-  username: 'postrge',
+  database: 'narodni_muzeum',
+  username: 'root',
   password: 'password',
   host: 'localhost',
-  dialect: 'sqlite' || 'mysql' || 'postgres',
+  dialect: 'mysql',
 };
 
 const testing = {

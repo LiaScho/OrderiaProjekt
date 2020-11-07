@@ -1,3 +1,4 @@
+const console = require('console');
 const database = require('../../config/database');
 
 const dbService = (environment, migrate) => {

@@ -1,3 +1,4 @@
+/*
 const request = require('supertest');
 const {
   beforeAction,
@@ -87,3 +88,5 @@ test('User | get all (auth)', async () => {
 
   await user.destroy();
 });
+
+*/
